@@ -35,8 +35,8 @@ const Header = () => {
                 </div>
                 <div className={` ${navIsVisible ? "right-0" : "-right-full"} transition-all duration-300 mt-[56px] lg:mt-0 bg-dark-hard lg:bg-transparent z-[49] flex flex-col w-full lg:w-auto justify-center lg:justify-end lg:flex-row fixed top-0 bottom-0 gap-x-9 items-center lg:static`}>
                     <ul className='text-white lg:text-dark-soft items-center gap-y-5 flex flex-col lg:flex-row gap-x-2 font-semibold'>
-                        {navlinks.map(links =>(
-                            <li className='relative group'>
+                        {navlinks.map((links, index) =>(
+                            <li key={index} className='relative group'>
                                 {links.type === 'link' ? (
                                     <>
                                         <a className='px-4 py-2' href={links.url}>{links.path}</a>
@@ -52,8 +52,8 @@ const Header = () => {
                                         </button>
                                         <div className={`${dropdownIsVisible ? "block" : "hidden"} lg:hidden transition-all duration-500 pt-4 lg:absolute lg:bottom-0 lg:right-0 lg:transform lg:translate-y-full lg:group-hover:block w-max`}>
                                             <ul className=' bg-dark-soft lg:bg-transparent text-center flex flex-col shadow-lg rounded-lg overflow-hidden'>
-                                                {links.items.map((page) => (
-                                                        <a className='hover:bg-dark-hard hover:text-white px-4 py-2 text-white lg:text-dark-soft' href='/'>{page}</a>
+                                                {links.items.map((page, index) => (
+                                                        <a key={index} className='hover:bg-dark-hard hover:text-white px-4 py-2 text-white lg:text-dark-soft' href='/'>{page}</a>
                                                    
                                                 ))}
                                             </ul>

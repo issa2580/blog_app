@@ -7,8 +7,8 @@ import { posts } from '../constants/posts';
 const Cards = ({className}) => {
     return (
         <>
-            {posts.map(post =>(
-                <div className={`rounded-xl overflow-hidden shadow-[rgba(7,_65,_210,_0.1)_0px,_9px,_30px] ${className}`}>
+            {posts.map((post, index) =>(
+                <div key={index} className={`rounded-xl overflow-hidden shadow-[rgba(7,_65,_210,_0.1)_0px,_9px,_30px] ${className}`}>
                     <img 
                         src={post.thumbnail} 
                         alt="image post" 
