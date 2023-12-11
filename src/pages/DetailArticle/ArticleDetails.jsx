@@ -5,6 +5,7 @@ import { images } from '../../constants/images';
 import { Link } from 'react-router-dom';
 import SuggestedPost from './SuggestedPost'
 import CommentContainer from '../../components/comments/CommentContainer';
+import SocialShareBtn from '../../components/comments/SocialShareBtn';
 
 
 const breadCrumbData = [
@@ -81,7 +82,25 @@ const ArticleDetails = () => {
                     </div>
                     <CommentContainer className='mt-10' loggedInId='a' />
                 </article>
-                <SuggestedPost header='Latest Article' posts={postData} tags={tagsData} className='mt-8 lg:mt-0 lg:max-w-xs' />
+                <div>
+                    <SuggestedPost 
+                        header='Latest Article' 
+                        posts={postData} 
+                        tags={tagsData} 
+                        className='mt-8 lg:mt-0 lg:max-w-xs' 
+                    />
+                    <div 
+                        className='mt-7'>
+                        <h2
+                            className=' font-roboto font-medium text-dark-hard mb-4 md:text-xl'>
+                            Share on:
+                        </h2>
+                        <SocialShareBtn
+                            url={encodeURI('https://moonfo.com/post/client-side-and-server-side-explanation')}
+                            title={encodeURIComponent('Client-side and Server-side explanation')}
+                        />
+                    </div>
+                </div>
             </section>
         </MainLayout>
     );

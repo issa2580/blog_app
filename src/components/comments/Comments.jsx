@@ -28,7 +28,7 @@ const Comments = ({comment, loggedInId, updateComment, deleteComment, getReplyHa
             <div 
                 className='flex-1 flex flex-col'>
                     <h5 
-                        className='font-bold text-dark-hard text-xs'>
+                        className='font-bold text-dark-hard text-xs lg:text-sm'>
                         {comment.user.name}
                     </h5>
                     <span 

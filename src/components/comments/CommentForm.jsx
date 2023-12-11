@@ -23,7 +23,7 @@ const CommentForm = ({btnSubmit, formSubmitHandler, formCanceledHandler = null, 
                     onChange={(e) => setValue(e.target.value)}
                 />
                 <div
-                    className='flex items-center gap-x-2 pt-2'>
+                    className='flex flex-col-reverse gap-y-2 items-center gap-x-2 pt-2 min-[420px]:flex-row'>
                     {formCanceledHandler && (
                         <button
                             onClick={formCanceledHandler}
