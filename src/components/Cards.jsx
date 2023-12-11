@@ -11,7 +11,7 @@ const Cards = ({className}) => {
                 <div key={index} className={`rounded-xl overflow-hidden shadow-[rgba(7,_65,_210,_0.1)_0px,_9px,_30px] ${className}`}>
                     <img 
                         src={post.thumbnail} 
-                        alt="image post" 
+                        alt="post" 
                         className='w-full object-cover object-center h-auto md:h-52 lg:h-48 xl:h-60' />
                     <div className='p-5'>
                         <h2 className='font-roboto font-bold text-xl text-dark-soft md:text-2xl lg:text-[28px]'>
