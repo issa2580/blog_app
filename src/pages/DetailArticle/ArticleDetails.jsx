@@ -4,6 +4,7 @@ import BreadCrumb from '../../components/BreadCrumb'
 import { images } from '../../constants/images';
 import { Link } from 'react-router-dom';
 import SuggestedPost from './SuggestedPost'
+import CommentContainer from '../../components/comments/CommentContainer';
 
 
 const breadCrumbData = [
@@ -78,6 +79,7 @@ const ArticleDetails = () => {
                             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Egestas purus viverra accumsan in nisl nisi. Arcu cursus vitae congue mauris rhoncus aenean vel elit scelerisque. In egestas erat imperdiet sed euismod nisi porta lorem mollis. Morbi tristique senectus et netus. Mattis pellentesque id nibh tortor id aliquet lectus proin. Sapien faucibus et molestie ac feugiat sed lectus vestibulum.
                         </p>
                     </div>
+                    <CommentContainer className='mt-10' loggedInId='a' />
                 </article>
                 <SuggestedPost header='Latest Article' posts={postData} tags={tagsData} className='mt-8 lg:mt-0 lg:max-w-xs' />
             </section>
